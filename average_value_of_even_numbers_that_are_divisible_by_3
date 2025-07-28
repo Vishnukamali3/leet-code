@@ -1,0 +1,13 @@
+class Solution:
+    def averageValue(self, nums: List[int]) -> int:
+        n=len(nums)
+        total=0
+        c=0
+        for i in range(n):
+            if nums[i]%3==0 and nums[i]%2==0:
+                total=total+nums[i]
+                c=c+1
+        if c>0:
+            return total//c
+        else:
+            return 0
